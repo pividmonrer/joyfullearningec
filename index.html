@@ -1,59 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <style>
-        /* Set background image */
-        body {
-            background-image: url('https://raw.githubusercontent.com/pividmonrer/joyfullearningec/refs/heads/main/JL%20background.png'); /* Update with your image */
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            font-family: Arial, sans-serif;
-            color: white;
-            text-align: center;
-            padding-top: 50px;
-        }
-
-        /* Logo styling */
-        .logo {
-            width: 200px; /* Adjust size */
-        }
-
-        /* Contact Info */
-        .contact {
-            margin-top: 20px;
-            font-size: 18px;
-            background: rgba(0, 0, 0, 0.5); /* Adds transparency */
-            padding: 20px;
-            display: inline-block;
-            border-radius: 10px;
-        }
-
-        /* Email Styling */
-        .contact a {
-            color: #FFD700; /* Gold color */
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .contact a:hover {
-            color: #FFA500; /* Orange color */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JoyfulLearning</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff9f0;
+      color: #333;
+    }
+    nav {
+      background: #ffcc70;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-around;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+    }
+    nav a:hover {
+      background: #ffd580;
+      border-radius: 5px;
+    }
+    section {
+      padding: 4rem 2rem;
+    }
+    .home {
+      text-align: center;
+      background: url('https://raw.githubusercontent.com/pividmonrer/joyfullearningec/refs/heads/main/logo%20JL.jpeg') no-repeat center center/cover;
+      color: white;
+      padding: 6rem 2rem;
+    }
+    .home h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .home p {
+      font-size: 1.2rem;
+    }
+    .teachers img {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+    }
+    .teacher {
+      margin-bottom: 2rem;
+    }
+    .calendar ul {
+      list-style: none;
+      line-height: 2;
+    }
+    .contact a {
+      color: #ff7f50;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#teachers">Teachers</a>
+    <a href="#calendar">Calendar</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <!-- Logo Image -->
-    <img src="https://raw.githubusercontent.com/pividmonrer/joyfullearningec/refs/heads/main/logo%20JL.jpeg" alt="Logo" class="logo">
+  <section id="home" class="home">
+    <h1>Welcome to JoyfulLearning</h1>
+    <p>Inspiring growth through joyful and meaningful English learning experiences.</p>
+  </section>
 
-    <!-- Contact Information -->
-    <div class="contact">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="info@joyfullearningec.com">info@joyfullearningec.com</a></p>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>JoyfulLearning is a creative and student-centered English learning platform for young adults and adults. Our mission is to make language learning joyful, effective, and full of purpose.</p>
+  </section>
+
+  <section id="teachers" class="teachers">
+    <h2>Meet Our Teachers</h2>
+    <div class="teacher">
+      <img src="https://raw.githubusercontent.com/pividmonrer/joyfullearningec/refs/heads/main/jenny3.jpeg" alt="Teacher 1" />
+      <h3>Jenny Silva</h3>
+      <p>Founder & Head Teacher – Passionate about communication, connection and transformation through language learning.</p>
     </div>
+    <div class="teacher">
+      <img src="teacher2.jpg" alt="Teacher 2" />
+      <h3>Daniela Herrera</h3>
+      <p>Specialist in Conversational English and Business Communication.</p>
+    </div>
+  </section>
 
+  <section id="calendar" class="calendar">
+    <h2>Upcoming Dates</h2>
+    <ul>
+      <li><strong>March 15:</strong> Start of New Term</li>
+      <li><strong>April 10:</strong> Conversation Club Meetup</li>
+      <li><strong>May 5:</strong> Writing Workshop</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:hello@joyfullearningec.com">hello@joyfullearningec.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/joyfullearningec" target="_blank">@joyfullearningec</a></p>
+  </section>
 </body>
 </html>
