@@ -11,110 +11,149 @@
       padding: 0;
     }
     body {
-      font-family: 'Poppins', sans-serif;
-      background: #fff9f0;
-      color: #333;
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #ffffff;
+      color: #222;
+      line-height: 1.6;
     }
     nav {
-      background: #ffcc70;
-      padding: 1rem;
+      background: #ffffff;
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 2rem;
       display: flex;
-      justify-content: space-around;
-      position: sticky;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
     }
     nav a {
+      margin-left: 1rem;
       text-decoration: none;
       color: #333;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
+      font-weight: 500;
     }
     nav a:hover {
-      background: #ffd580;
-      border-radius: 5px;
+      color: #ff9900;
+    }
+    .container {
+      padding: 6rem 2rem 2rem;
+      max-width: 800px;
+      margin: auto;
     }
     section {
-      padding: 4rem 2rem;
+      display: none;
     }
-    .home {
-      text-align: center;
-      background: url('https://raw.githubusercontent.com/pividmonrer/joyfullearningec/refs/heads/main/logo%20JL.jpeg') no-repeat center center/cover;
-      color: white;
-      padding: 6rem 2rem;
-    }
-    .home h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    .home p {
-      font-size: 1.2rem;
+    section.active {
+      display: block;
     }
     .teachers img {
-      width: 150px;
+      width: 120px;
       border-radius: 50%;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
     .teacher {
       margin-bottom: 2rem;
     }
-    .calendar ul {
-      list-style: none;
-      line-height: 2;
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
-    .contact a {
-      color: #ff7f50;
-      text-decoration: none;
-      font-weight: bold;
+    form button {
+      background-color: #ff9900;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #e68a00;
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav a {
+        margin: 0.5rem 0;
+      }
     }
   </style>
 </head>
 <body>
   <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#teachers">Teachers</a>
-    <a href="#calendar">Calendar</a>
-    <a href="#contact">Contact</a>
+    <strong>JoyfulLearning</strong>
+    <div>
+      <a href="#home" onclick="showSection('home')">Home</a>
+      <a href="#about" onclick="showSection('about')">About</a>
+      <a href="#teachers" onclick="showSection('teachers')">Teachers</a>
+      <a href="#calendar" onclick="showSection('calendar')">Calendar</a>
+      <a href="#contact" onclick="showSection('contact')">Contact</a>
+    </div>
   </nav>
 
-  <section id="home" class="home">
-    <h1>Welcome to JoyfulLearning</h1>
-    <p>Inspiring growth through joyful and meaningful English learning experiences.</p>
-  </section>
+  <div class="container">
+    <section id="home" class="active">
+      <h1>Welcome to JoyfulLearning</h1>
+      <p>Empowering students with joyful and effective English learning experiences.</p>
+    </section>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>JoyfulLearning is a creative and student-centered English learning platform for young adults and adults. Our mission is to make language learning joyful, effective, and full of purpose.</p>
-  </section>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>JoyfulLearning is a professional English education platform committed to serious results with a joyful approach. We offer personalized attention, dynamic resources, and purpose-driven learning.</p>
+    </section>
 
-  <section id="teachers" class="teachers">
-    <h2>Meet Our Teachers</h2>
-    <div class="teacher">
-      <img src="https://raw.githubusercontent.com/pividmonrer/joyfullearningec/refs/heads/main/jenny3.jpeg" alt="Teacher 1" />
-      <h3>Jenny Silva</h3>
-      <p>Founder & Head Teacher – Passionate about communication, connection and transformation through language learning.</p>
-    </div>
-    <div class="teacher">
-      <img src="teacher2.jpg" alt="Teacher 2" />
-      <h3>Daniela Herrera</h3>
-      <p>Specialist in Conversational English and Business Communication.</p>
-    </div>
-  </section>
+    <section id="teachers" class="teachers">
+      <h2>Meet Our Teachers</h2>
+      <div class="teacher">
+        <img src="https://raw.githubusercontent.com/pividmonrer/joyfullearningec/refs/heads/main/jenny3.jpeg" alt="Jenny Silva" />
+        <h3>Jenny Silva</h3>
+        <p>Founder & Head Teacher – Focused on connection and transformation through language learning.</p>
+      </div>
+      <div class="teacher">
+        <img src="teacher2.jpg" alt="Mark Thompson" />
+        <h3>Daniela Herrera</h3>
+        <p>Expert in Business English and public speaking training.</p>
+      </div>
+    </section>
 
-  <section id="calendar" class="calendar">
-    <h2>Upcoming Dates</h2>
-    <ul>
-      <li><strong>March 15:</strong> Start of New Term</li>
-      <li><strong>April 10:</strong> Conversation Club Meetup</li>
-      <li><strong>May 5:</strong> Writing Workshop</li>
-    </ul>
-  </section>
+    <section id="calendar" class="calendar">
+      <h2>Upcoming Dates</h2>
+      <ul>
+        <li><strong>March 15:</strong> Start of New Term</li>
+        <li><strong>April 10:</strong> Conversation Club Meetup</li>
+        <li><strong>May 5:</strong> Writing Workshop</li>
+      </ul>
+    </section>
 
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:hello@joyfullearningec.com">hello@joyfullearningec.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/joyfullearningec" target="_blank">@joyfullearningec</a></p>
-  </section>
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:hello@joyfullearningec.com">hello@joyfullearningec.com</a></p>
+      <p>Instagram: <a href="https://instagram.com/joyfullearningec" target="_blank">@joyfullearningec</a></p>
+
+      <h3>Register Your Interest</h3>
+      <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <textarea placeholder="Tell us what you're looking for" rows="4"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </div>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
