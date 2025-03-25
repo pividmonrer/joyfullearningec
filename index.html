@@ -28,6 +28,9 @@
       top: 0;
       z-index: 1000;
     }
+    .logo {
+      height: 40px;
+    }
     nav a {
       margin-left: 1rem;
       text-decoration: none;
@@ -74,6 +77,11 @@
     form button:hover {
       background-color: #e68a00;
     }
+    .home-image {
+      width: 100%;
+      margin-top: 2rem;
+      border-radius: 10px;
+    }
     @media (max-width: 600px) {
       nav {
         flex-direction: column;
@@ -87,7 +95,7 @@
 </head>
 <body>
   <nav>
-    <strong>JoyfulLearning</strong>
+    <img src="https://raw.githubusercontent.com/pividmonrer/joyfullearningec/refs/heads/main/logo%20JL.jpeg" alt="JoyfulLearning Logo" class="logo">
     <div>
       <a href="#home" onclick="showSection('home')">Home</a>
       <a href="#about" onclick="showSection('about')">About</a>
@@ -101,6 +109,7 @@
     <section id="home" class="active">
       <h1>Welcome to JoyfulLearning</h1>
       <p>Empowering students with joyful and effective English learning experiences.</p>
+      <img src="https://raw.githubusercontent.com/pividmonrer/joyfullearningec/refs/heads/main/jennyhome.jpg" alt="JoyfulLearning Class" class="home-image">
     </section>
 
     <section id="about">
@@ -116,7 +125,7 @@
         <p>Founder & Head Teacher – Focused on connection and transformation through language learning.</p>
       </div>
       <div class="teacher">
-        <img src="teacher2.jpg" alt="Mark Thompson" />
+        <img src="https://raw.githubusercontent.com/pividmonrer/joyfullearningec/refs/heads/main/danielaherrera.png" alt="Daniela Herrera" />
         <h3>Daniela Herrera</h3>
         <p>Expert in Business English and public speaking training.</p>
       </div>
